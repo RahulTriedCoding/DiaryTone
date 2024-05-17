@@ -1,10 +1,11 @@
+import nltk
 import streamlit as st
 import glob
 import plotly.express as px
 import re
 import pandas as pd
 from nltk.sentiment import SentimentIntensityAnalyzer
-
+nltk.download('vader_lexicon')
 st.title("Diary Tone")
 
 myfiles = sorted(glob.glob("files/*.txt"))
